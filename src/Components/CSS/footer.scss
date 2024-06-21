@@ -1,0 +1,249 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 40rem;
+}
+
+.podcastPlayer {
+  width: 100%;
+  height: 220px;
+  background-color: #131212;
+  color: #fff;
+  font-family: "BDOGrotesk", Courier, monospace;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+
+  p {
+    color: #ccef4d;
+    font-size: 1.5rem;
+    text-wrap: wrap;
+    text-transform: uppercase;
+  }
+
+  p:nth-child(2n) {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+
+  img {
+    width: 90px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+}
+
+.podcastDetails {
+  display: flex;
+}
+
+.playbackControls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.controlBtn {
+  background: none;
+  border: none;
+  width: 35px;
+
+  svg {
+    color: #8eaaf6;
+    width: 100%;
+  }
+}
+
+.playBtn {
+  background: none;
+  border: none;
+  color: #8eaaf6;
+  min-width: 30px;
+  svg {
+    width: 40px;
+  }
+}
+
+.durationControls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 1rem;
+  span {
+    max-width: 100px;
+    min-width: 80px;
+    font-size: 1.2rem;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 90%;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 10px;
+    border-radius: 55px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ccef4d;
+    height: 12px;
+    width: 12px;
+    border-radius: 55px;
+  }
+}
+
+.volumeControls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 120px;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 0.5rem;
+    border-radius: 55px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ccef4d;
+    height: 12px;
+    width: 12px;
+    border-radius: 55px;
+  }
+}
+
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-bottom: 1.2rem;
+}
+
+.bottomPlaybackControls {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+progress {
+  width: 90%;
+  height: 10px;
+  position: absolute;
+  bottom: 1;
+  border-radius: 55rem;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #053a5f;
+  border-radius: 55rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #000;
+  border-radius: 55rem;
+}
+
+.durationBarWrapper {
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.durationBar {
+  position: absolute;
+  bottom: 1;
+  opacity: 0.6;
+}
+
+//small screen
+// @media (min-width: 480px) and (max-width: 767px) {
+//   .podcastContainer {
+//     width: 35rem;
+//   }
+// }
+
+// //small tablets
+@media screen and (min-width: 768px) {
+}
+
+//   .podcastResultsContainer {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+
+// //small tablets
+// @media (min-width: 768px) and (max-width: 991px) {
+//   .podcastContainer {
+//     width: 30rem;
+//   }
+
+//   .podcastResultsContainer {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+
+// @media (min-width: 992px) and (max-width: 1200px) {
+//   .podcastContainer {
+//     width: 40rem;
+//   }
+
+//   .podcastResultsContainer {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+
+// .searchContainer{
+//   input[type="text"]{
+//     width: 50vw;
+//   }
+// }
+
+// @media screen and (min-width: 1201px) {
+//   .podcastContainer {
+//     width: 40rem;
+//     margin-left: 10rem;
+//     margin-right: 10rem;
+//   }
+
+//   .podcastResultsContainer {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+
+//   }
+
+//   input[type="text"]{
+//     width: 45vw;
+//   }
+// }

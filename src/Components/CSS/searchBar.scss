@@ -1,0 +1,78 @@
+@font-face {
+  font-display: swap;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../Fonts/red-hat-display-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30rem;
+}
+
+.searchBtn {
+  border: none;
+  background-color: #666a86;  
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "BDOGrotesk", Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background-color: #666a86;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.searchContainer {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: #99d1ff;
+  background-image: radial-gradient(
+      at 52% 59%,
+      hsla(128, 68%, 70%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 5% 6%, #ccef4d 0px, transparent 50%),
+    radial-gradient(at 23% 2%, #8eaaf6 0px, transparent 50%),
+    radial-gradient(at 75% 82%, #6771f4 0px, transparent 50%),
+    radial-gradient(at 88% 95%, #9071ff 0px, transparent 50%),
+    radial-gradient(at 61% 12%, #a14af2 0px, transparent 50%),
+    radial-gradient(at 96% 16%, #844ff8 0px, transparent 50%),
+    radial-gradient(at 23% 13%, #f8bd81 0px, transparent 50%),
+    radial-gradient(at 74% 15%, #e29979 0px, transparent 50%);
+}
+
+input[type="text"] {
+  width: 85%;
+  font-size: .7rem;
+  background-color: #fff;
+  border: none;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 5rem;
+  margin-top: 6rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "BDOGrotesk", Courier, monospace;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: #000;
+    font-family: "BDOGrotesk", Courier, monospace;
+    text-transform: uppercase;
+  }
+}
