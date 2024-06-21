@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useAudioContext } from "../PodcastPlayer/AudioContext";
 import {
   getEpisode,
   selectIsLoading,
+  selectPaused,
   setIsClicked,
 } from "../../redux/playerSlice";
 import { FaPlay } from "react-icons/fa6";
@@ -11,13 +13,16 @@ import {
   setPlayButton,
   setIsLoading,
 } from "../../redux/playerSlice";
-import playingGif from "../../assets/playing.gif";
+import "../CSS/audioWave.scss";
 
 const EpisodePlayBtn = ({ episodePod }) => {
   const queue = useSelector(selectQueue);
   const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
   const [playing, setPlaying] = useState(false);
+  const paused = useSelector(selectPaused);
+  const audioRef = useAudioContext();
+
   useEffect(() => {
     if (!queue.length) {
       return;
@@ -28,6 +33,7 @@ const EpisodePlayBtn = ({ episodePod }) => {
       } else {
         setPlaying(false);
       }
+      console.log(playing);
     }
   }, [queue, episodePod]);
 
@@ -47,7 +53,27 @@ const EpisodePlayBtn = ({ episodePod }) => {
             dispatch(setIsLoading(true));
           }}
         >
-          {playing ? <img src={playingGif} /> : <FaPlay />}
+          {playing ? (
+            <div className="audioWaveContainer">
+              <div
+                className={!paused ? "line line1" : " line pausedLine line1"}
+              ></div>
+              <div
+                className={!paused ? "line line2" : "line pausedLine line2"}
+              ></div>
+              <div
+                className={!paused ? "line line3" : "line pausedLine line3"}
+              ></div>
+              <div
+                className={!paused ? "line line4" : "line pausedLine line4"}
+              ></div>
+              <div
+                className={!paused ? "line line5" : " line pausedLine line5"}
+              ></div>
+            </div>
+          ) : (
+            <FaPlay />
+          )}
         </button>
       ) : (
         <button>

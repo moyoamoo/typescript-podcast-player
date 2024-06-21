@@ -5,16 +5,14 @@ import {
   selectQueue,
   selectPlayButton,
   setIsLoading,
-  setCurrentlyPlaying,
   selectIsClicked,
   setIsClicked,
-  setEpisodeReadyState,
+  setPaused,
 } from "../../redux/playerSlice";
 import PodcastPlayerDescription from "./PodcastPlayerDescription";
 import Controls from "./Controls";
 import axios from "axios";
 import { setListenData } from "../../redux/statsSlice";
-import { selectToken } from "../../redux/librarySlice";
 import { url } from "../../config";
 import { useAudioContext } from "./AudioContext";
 import { addGenres } from "../../apiRequests/Player/addGenres";
@@ -35,18 +33,20 @@ const PodcastPlayer = () => {
   const [genreDuration, setGenreDuration] = useState(0);
   const [lastClick, setLastClick] = useState(Date.now());
   const dispatch = useDispatch();
-  const token = useSelector(selectToken);
   const isClicked = useSelector(selectIsClicked);
-
   useEffect(() => {
     if (readyState && playButton && lastClick > 5000 && isClicked) {
       audioRef.current.play();
       setIsPlaying(true);
       setIsClicked(false);
+      dispatch(setPaused(false));
     } else if (readyState) {
       audioRef.current.pause();
       setIsPlaying(false);
       setIsClicked(false);
+      dispatch(setPaused(true));
+
+      dispatch(setPaused(true));
     }
   }, [playButton, readyState, audioRef, isClicked]);
 
@@ -151,7 +151,7 @@ const PodcastPlayer = () => {
             onPlay={() => {
               getListenedData();
               setIsPlaying(true);
-              console.log(isPlaying, audioRef.current.paused);
+              dispatch(setPaused(false));
             }}
           ></audio>
           <Controls

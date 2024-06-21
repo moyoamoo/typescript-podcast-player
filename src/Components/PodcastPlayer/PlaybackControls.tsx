@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import PlaybackControl from "./PlaybackControl";
 import { FaForwardStep, FaBackwardStep } from "react-icons/fa6";
 import { TbRewindForward30, TbRewindBackward30 } from "react-icons/tb";

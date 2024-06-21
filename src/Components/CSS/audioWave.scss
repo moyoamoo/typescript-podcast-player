@@ -1,0 +1,78 @@
+.audioWaveContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  --boxSize: 8px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+}
+
+.line {
+  transform: scaleY(0.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: #449dd1;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.pausedLine {
+  animation-play-state: paused;
+}
+
+.line1 {
+  animation-name: low;
+}
+
+.line2 {
+  animation-name: mid;
+}
+
+.line3 {
+  animation-name: low;
+}
+
+.line4 {
+  animation-name: high;
+}
+
+.line5 {
+  animation-name: low;
+}
+
+@keyframes low {
+  25% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes mid {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.6);
+  }
+}
+@keyframes high {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(1.2);
+  }
+}
