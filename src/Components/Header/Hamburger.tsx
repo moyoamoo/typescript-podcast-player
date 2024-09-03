@@ -6,7 +6,6 @@ interface Props {
 }
 
 const Hamburger = ({ toggleMenu, openMenu }: Props) => {
-  console.log(openMenu);
   return (
     <>
       <button

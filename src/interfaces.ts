@@ -2,13 +2,13 @@ interface IPodcast {
   description?: string;
   genres?: string[];
   episodes?: IPodcast[];
-  imageUrl: string;
+  imageUrl?: string;
   totalEpisodesCount?: number;
-  name?: string;
+  name?: string | undefined;
   uuid: string;
   datePublished?: Date;
   podcastName?: string;
-  podcastUuid: string;
+  podcastUuid?: string;
   topPodcast?: boolean;
 }
 

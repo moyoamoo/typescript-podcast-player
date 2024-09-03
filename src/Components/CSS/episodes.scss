@@ -202,12 +202,15 @@
   margin-bottom: 20rem;
 }
 
-
 @media screen and (min-width: 991px) {
   .episodeContainer {
     width: 70vw;
+   
   }
 
+  .podDescription {
+    font-size: 2rem;
+  }
   .podContainer {
     display: flex;
     flex-direction: column;
@@ -216,21 +219,18 @@
   }
 
   .episodesContainer {
-   
+    h2 {
+      font-size: 4rem;
+    }
     div {
-  
       img {
-        width: 50%;
-        
+        width: 30%;
       }
     }
   }
-  
-
 }
 
-
-.sortContainer{
+.sortContainer {
   display: flex;
   flex-direction: column;
 }

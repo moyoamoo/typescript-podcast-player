@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../CSS/footer.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,12 +11,10 @@ import {
 } from "../../redux/playerSlice";
 import PodcastPlayerDescription from "./PodcastPlayerDescription";
 import Controls from "./Controls";
-import axios from "axios";
-import { setListenData } from "../../redux/statsSlice";
-import { url } from "../../config";
 import { useAudioContext } from "./AudioContext";
 import { addGenres } from "../../apiRequests/Player/addGenres";
 import { updateServerDuration } from "../../apiRequests/Player/updateServerDuration";
+import { getListenedData } from "../../apiRequests/Player/getListenedData";
 
 const PodcastPlayer = () => {
   const audioRef = useAudioContext();
@@ -31,9 +29,10 @@ const PodcastPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [genreDuration, setGenreDuration] = useState(0);
-  const [lastClick, setLastClick] = useState(Date.now());
+  const [lastClick] = useState(Date.now());
   const dispatch = useDispatch();
   const isClicked = useSelector(selectIsClicked);
+
   useEffect(() => {
     if (readyState && playButton && lastClick > 5000 && isClicked) {
       audioRef.current.play();
@@ -46,7 +45,6 @@ const PodcastPlayer = () => {
       setIsClicked(false);
       dispatch(setPaused(true));
 
-      dispatch(setPaused(true));
     }
   }, [playButton, readyState, audioRef, isClicked]);
 
@@ -64,26 +62,6 @@ const PodcastPlayer = () => {
     setPreviousElpased(_elapsed);
   }, [elapsed]);
 
-  const getListenedData = async () => {
-    try {
-      const { data } = await axios.get(`${url}/listened/get`, {
-        headers: {
-          episodeUuid: queue[queueIndex].uuid,
-        },
-      });
-      if (data.data) {
-        dispatch(
-          setListenData({
-            uuid: queue[queueIndex].uuid,
-            positionData: data.data,
-            duration: audioRef.current.duration,
-          })
-        );
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  };
   const setProgressDuration = () => {
     if (audioRef.current.currentTime) {
       const progress = Math.round(

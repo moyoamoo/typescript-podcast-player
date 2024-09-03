@@ -49,6 +49,7 @@ export const getPodcastData = async (
       },
     });
 
+
     //if there is no data 
     if (!data.data) {
       store.dispatch(setMessage(`Search Results Unavailable`));
@@ -73,14 +74,15 @@ export const getPodcastData = async (
       case "search":
         store.dispatch(storeApiData(data.data));
         break;
-      case "search":
-        store.dispatch(appendApiDataSearch(data.data));
-        break;
+      // case "search":
+      //   store.dispatch(appendApiDataSearch(data.data));
+      //   break;
 
       default:
         break;
     }
   } catch (error) {
+    console.log(error)
     store.dispatch(setMessage("Podcast Search Unavailable"));
   }
 };

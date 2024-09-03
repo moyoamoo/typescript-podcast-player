@@ -1,0 +1,202 @@
+.podDescription {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.queueContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.episodesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.episodesContainer div {
+  display: flex;
+  justify-content: center;
+}
+.episodesContainer div img {
+  width: 40%;
+  border-radius: 2rem;
+}
+.episodesContainer p {
+  margin: 10px;
+}
+.episodesContainer h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin: 2rem;
+}
+.episodesContainer .line {
+  border-top: 1rem solid #fff;
+  width: 25%;
+}
+.episodesContainer .podcastDescription {
+  color: #fff;
+  line-height: 25px;
+}
+.episodesContainer a {
+  color: #449dd1;
+}
+
+.epHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.epHeader button {
+  background: none;
+  border: none;
+  max-width: 50px;
+  min-width: 50px;
+}
+.epHeader button svg {
+  width: 30px;
+  height: 30px;
+  color: #666a86;
+}
+
+.queueDeleteBtn {
+  background: none;
+  color: #fff;
+  border: none;
+  max-width: 100px;
+  min-width: 50px;
+}
+.queueDeleteBtn svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.episodeContainer {
+  margin: 2rem;
+  padding: 2.3rem;
+  color: #fff;
+  border-radius: 1rem;
+  height: 15%;
+  font-family: "BDOGrotesk", Courier, monospace;
+  background-color: #242423;
+}
+.episodeContainer img {
+  width: 15rem;
+  border-radius: 0.7rem;
+  height: 50px;
+}
+
+.libraryPodcastHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+.libraryPodcastHeading h2 {
+  margin-left: 5px;
+}
+
+.showBtn {
+  border: none;
+  background-color: #ddd;
+  padding: 0.7rem;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: "BDOGrotesk", Courier, monospace;
+}
+
+.epDescriptionNone {
+  display: none;
+}
+
+.epDescription {
+  display: block;
+  margin-top: 25px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  width: 100px;
+  text-align: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+  -o-border-image: linear-gradient(to bottom right, #a14af2 0%, #8eaaf6 25%, #ccef4d 50%, hsl(30, 90%, 74%) 75%, hsl(18, 64%, 68%) 100%);
+     border-image: linear-gradient(to bottom right, #a14af2 0%, #8eaaf6 25%, #ccef4d 50%, hsl(30, 90%, 74%) 75%, hsl(18, 64%, 68%) 100%);
+  border-image-slice: 1;
+}
+
+.showMoreEps {
+  border: none;
+  background-color: #fff;
+  padding: 1rem;
+  color: #000;
+  font-family: "BDOGrotesk", Courier, monospace;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.showMoreEps:hover {
+  background-color: hsl(224, 85%, 76%);
+  color: #000;
+}
+
+.queueBtn {
+  border: none;
+  background-color: #666a86;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+  align-items: center;
+  padding: 0.7rem;
+  color: #fff;
+  font-family: "BDOGrotesk", Courier, monospace;
+  font-size: 1.5rem;
+}
+.queueBtn svg {
+  color: #fff;
+  width: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.showMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rem;
+}
+
+@media screen and (min-width: 991px) {
+  .episodeContainer {
+    width: 70vw;
+  }
+  .podContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .episodesContainer div img {
+    width: 50%;
+  }
+}
+.sortContainer {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=episodes.css.map */

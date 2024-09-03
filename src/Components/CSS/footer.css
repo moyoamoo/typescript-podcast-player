@@ -1,0 +1,172 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 40rem;
+}
+
+.podcastPlayer {
+  width: 100%;
+  height: 220px;
+  background-color: #131212;
+  color: #fff;
+  font-family: "BDOGrotesk", Courier, monospace;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+}
+.podcastPlayer p {
+  color: #ccef4d;
+  font-size: 1.5rem;
+  text-wrap: wrap;
+  text-transform: uppercase;
+}
+.podcastPlayer p:nth-child(2n) {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+.podcastPlayer img {
+  width: 90px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.podcastDetails {
+  display: flex;
+}
+
+.playbackControls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.controlBtn {
+  background: none;
+  border: none;
+  width: 35px;
+}
+.controlBtn svg {
+  color: #8eaaf6;
+  width: 100%;
+}
+
+.playBtn {
+  background: none;
+  border: none;
+  color: #8eaaf6;
+  min-width: 30px;
+}
+.playBtn svg {
+  width: 40px;
+}
+
+.durationControls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 1rem;
+}
+.durationControls span {
+  max-width: 100px;
+  min-width: 80px;
+  font-size: 1.2rem;
+}
+.durationControls input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 90%;
+}
+.durationControls input[type=range]::-webkit-slider-runnable-track {
+  background: #053a5f;
+  height: 10px;
+  border-radius: 55px;
+}
+.durationControls input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ccef4d;
+  height: 12px;
+  width: 12px;
+  border-radius: 55px;
+}
+
+.volumeControls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+}
+.volumeControls input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 120px;
+}
+.volumeControls input[type=range]::-webkit-slider-runnable-track {
+  background: #053a5f;
+  height: 0.5rem;
+  border-radius: 55px;
+}
+.volumeControls input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ccef4d;
+  height: 12px;
+  width: 12px;
+  border-radius: 55px;
+}
+
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-bottom: 1.2rem;
+}
+
+.bottomPlaybackControls {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+progress {
+  width: 90%;
+  height: 10px;
+  position: absolute;
+  bottom: 1;
+  border-radius: 55rem;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #053a5f;
+  border-radius: 55rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #000;
+  border-radius: 55rem;
+}
+
+.durationBarWrapper {
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.durationBar {
+  position: absolute;
+  bottom: 1;
+  opacity: 0.6;
+}/*# sourceMappingURL=footer.css.map */

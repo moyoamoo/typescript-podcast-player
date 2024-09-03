@@ -1,13 +1,15 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa6";
 import { setPaused } from "../../redux/playerSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const PlayButton = forwardRef(function PlayButton(
   { isPlaying, setIsPlaying, readyState },
   audioRef
 ) {
+
+
   const dispatch = useDispatch();
   const togglePlay = () => {
     if (isPlaying) {
@@ -19,6 +21,7 @@ const PlayButton = forwardRef(function PlayButton(
     }
     setIsPlaying(!isPlaying);
   };
+
 
   return (
     <>

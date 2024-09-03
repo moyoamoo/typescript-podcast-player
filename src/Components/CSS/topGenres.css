@@ -1,0 +1,13 @@
+.topGenres {
+  width: 80vw;
+  height: 50vw;
+  border: 2px solid transparent;
+  -o-border-image: linear-gradient(to bottom right, hsl(271, 87%, 62%) 0%, hsl(224, 85%, 76%) 25%, #ccef4d 50%, hsl(30, 90%, 74%) 75%, hsl(18, 64%, 68%) 100%);
+     border-image: linear-gradient(to bottom right, hsl(271, 87%, 62%) 0%, hsl(224, 85%, 76%) 25%, #ccef4d 50%, hsl(30, 90%, 74%) 75%, hsl(18, 64%, 68%) 100%);
+  border-image-slice: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10rem;
+}/*# sourceMappingURL=topGenres.css.map */

@@ -45,6 +45,7 @@ export const podcastSlice = createSlice({
 
     //adds new episodes to store
     storeAdditionalApiData: (state, { payload }) => {
+      console.log(payload)
       const indexOf = state.apiData.searchForTerm.podcastSeries.findIndex(
         (podcast) => {
           return podcast.uuid === payload.uuid;

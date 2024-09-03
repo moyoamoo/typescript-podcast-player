@@ -29,6 +29,8 @@ export const getPodcastByUuid = async (uuid, order, page, storeDestination) => {
       },
     });
 
+    console.log(data)
+
     if (!data.data) {
       console.log("undefined data");
       store.dispatch(setMessage("Podcasts unavilable"));

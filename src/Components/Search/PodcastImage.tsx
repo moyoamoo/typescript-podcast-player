@@ -1,7 +1,6 @@
 import defaultImage from "../../assets/podcast-icon.jpg";
 import placeHolder from "../../assets/placeholder.jpg"
 import { IPodcast } from "../../interfaces";
-import { SyntheticEvent } from "react";
 
 const PodcastImage = ({ podcast }: { podcast: IPodcast }) => {
   return (
@@ -10,7 +9,7 @@ const PodcastImage = ({ podcast }: { podcast: IPodcast }) => {
         loading="lazy"
         src={placeHolder}
         alt={podcast.name}
-        onError={(e: SyntheticEvent<HTMLImageElement>) => {
+        onError={(e) => {
           e.currentTarget.src = defaultImage;
           e.currentTarget.onerror = null;
         }}
